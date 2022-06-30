@@ -706,7 +706,6 @@ async def auto_filter(client, msg, spoll=False):
            a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
            await asyncio.sleep(30)
-           await message.delete()
            await a.delete()
         except Exception as e:
             logger.exception(e)
